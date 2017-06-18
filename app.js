@@ -18,9 +18,9 @@ app.use((req,res,next)=>{
 app.use(express.static(__dirname+"/public"));
 app.set("view engine","hbs");
 app.get("/",(req,res)=>{
-  res.send("Server Starting in port "+3000)
+  res.send("Root page "+3000)
 })
-app.get("/",(req,res)=>{
+app.get("/home",(req,res)=>{
   res.render("home.hbs",{Year});
 })
 app.listen(port,()=>{
