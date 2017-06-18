@@ -21,7 +21,7 @@ app.get("/",(req,res)=>{
   res.send("Root page "+3000)
 })
 app.get("/home",(req,res)=>{
-  res.render("home.hbs",{Year});
+  res.render("home.hbs",{Year:new Date().getFullYear()});
 })
 app.listen(port,()=>{
   console.log(`Starting app ${port}`)
